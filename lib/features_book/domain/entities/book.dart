@@ -8,8 +8,7 @@ class Book {
     final volumeInfo = json['volumeInfo'];
     return Book(
       title: volumeInfo['title'] ?? 'Unknown Title',
-      author: (volumeInfo['authors'] as List<dynamic>?)?.join(", ") ??
-          'Unknown Author',
+      author: (volumeInfo['authors'] as List<dynamic>?)?.join(", ") ?? 'Unknown Author',
     );
   }
 }
